@@ -1,7 +1,6 @@
 package com.agusbr.pockemon_viewer.ui.screens
 
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
@@ -18,7 +17,6 @@ import kotlinx.coroutines.launch
 import io.kamel.image.KamelImage
 import io.kamel.image.asyncPainterResource
 import androidx.compose.runtime.remember
-import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.lazy.grid.*
 
 @Composable
@@ -61,7 +59,7 @@ fun PokemonScreen() {
         }
     } else {
         LazyVerticalGrid(
-            columns = GridCells.Adaptive(minSize = 200.dp), // Se adapta al tamaño de la pantalla
+            columns = GridCells.Adaptive(minSize = 180.dp), // Se adapta al tamaño de la pantalla
             modifier = Modifier
                 .fillMaxSize()
                 .padding(16.dp),
