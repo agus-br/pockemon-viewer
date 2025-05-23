@@ -3,11 +3,12 @@ package com.agusbr.pockemon_viewer.network
 import com.agusbr.pockemon_viewer.model.Pokemon
 import com.agusbr.pockemon_viewer.model.PokemonListItem
 import com.agusbr.pockemon_viewer.model.PokemonListResponse
-import io.ktor.client.*
-import io.ktor.client.call.*
-import io.ktor.client.request.*
-import io.ktor.client.plugins.contentnegotiation.*
-import io.ktor.serialization.kotlinx.json.*
+import io.ktor.client.HttpClient
+import io.ktor.client.call.body
+import io.ktor.client.plugins.contentnegotiation.ContentNegotiation
+import io.ktor.client.request.get
+import io.ktor.serialization.kotlinx.json.json
+
 import kotlinx.serialization.json.Json
 
 object PokemonApiService {
