@@ -95,6 +95,7 @@ android {
     namespace = "com.agusbr.pockemon_viewer"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
+
     defaultConfig {
         applicationId = "com.agusbr.pockemon_viewer"
         minSdk = libs.versions.android.minSdk.get().toInt()
@@ -102,6 +103,11 @@ android {
         versionCode = 1
         versionName = "1.0"
     }
+
+    lint {
+        disable += "NullSafeMutableLiveData"
+    }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
